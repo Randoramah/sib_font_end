@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investment Knowledge Club</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: #f5f5f5;
+        }
+        .main-card {
+            background: #333;
+            color: #fff;
+            border-radius: 16px;
+            padding: 24px 16px 16px 16px;
+            margin: 24px auto 0 auto;
+            max-width: 400px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+        }
+        .profile-img {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #fff;
+            margin-bottom: 8px;
+        }
+        .profile-section {
+            text-align: left;
+            border: 1px solid #ffd700;
+            border-radius: 8px;
+            padding: 12px 12px 12px 12px;
+            margin-bottom: 18px;
+            background: #222;
+        }
+        .profile-section h5 {
+            margin: 0 0 4px 0;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+        .profile-section p {
+            margin: 0;
+            font-size: 0.98rem;
+        }
+        .score-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 18px;
+        }
+        .score-card {
+            flex: 1 1 45%;
+            min-width: 45%;
+            background: #f8d7da;
+            border-radius: 10px;
+            padding: 10px 8px;
+            text-align: center;
+            color: #222;
+            font-weight: 500;
+            position: relative;
+        }
+        .score-card.green {
+            background: #e2f7d7;
+        }
+        .score-card.yellow {
+            background: #fff3cd;
+        }
+        .score-card .score-name {
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+        .score-card .score-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-top: 2px;
+        }
+        .section-title {
+            font-weight: 700;
+            color: #ffd700;
+            margin-bottom: 4px;
+            font-size: 1.25rem;
+            letter-spacing: 0.01em;
+        }
+        .section-desc {
+            color: #ffd700;
+            font-size: 1.05rem;
+            margin-bottom: 0;
+            font-weight: 500;
+        }
+        .membership-section {
+            margin-top: 16px;
+        }
+        .membership-card {
+            border-radius: 8px;
+            padding: 12px 14px;
+            margin-bottom: 10px;
+        }
+        .foundation {
+            background: #ffe082;
+            color: #222;
+        }
+        .foundation-header {
+            background: #ffd700;
+            color: #fff;
+            padding: 8px 14px 4px 14px;
+            border-radius: 8px 8px 0 0;
+            font-weight: 600;
+            font-size: 1.1rem;
+            letter-spacing: 0.5px;
+        }
+        .foundation-header span {
+            color: #e0e0e0;
+            font-weight: 400;
+        }
+        .foundation-body {
+            background: #444;
+            color: #fff;
+            padding: 12px 14px 10px 14px;
+            border-radius: 0 0 8px 8px;
+            font-size: 0.98rem;
+        }
+        .economy-header {
+            background: #7b8fa3;
+            color: #fff;
+            padding: 8px 14px 4px 14px;
+            border-radius: 8px 8px 0 0;
+            font-weight: 600;
+            font-size: 1.1rem;
+            letter-spacing: 0.5px;
+        }
+        .economy-header span {
+            color: #e0e0e0;
+            font-weight: 400;
+        }
+        .economy-body {
+            background: #444;
+            color: #fff;
+            padding: 12px 14px 10px 14px;
+            border-radius: 0 0 8px 8px;
+            font-size: 0.98rem;
+        }
+        @media (max-width: 500px) {
+            .main-card {
+                max-width: 98vw;
+                padding: 10px 2vw;
+            }
+            .foundation-header, .economy-header {
+                font-size: 1rem;
+                padding: 8px 8px 4px 8px;
+            }
+            .foundation-body, .economy-body {
+                font-size: 0.93rem;
+                padding: 10px 8px 8px 8px;
+            }
+            .membership-card {
+                padding: 0;
+            }
+            .w-100.text-center.my-2 > div {
+                font-size: 0.98rem;
+                padding: 7px 2px;
+            }
+        }
+        .yellow-info-bar {
+            background: #ffd700;
+            color: white;
+            padding: 8px 0;
+            border-radius: 6px;
+            font-weight: 500;
+            max-width: 95%;
+            margin: 0 auto;
+            font-size: 0.78rem;
+            text-align: center;
+        }
+        .economy {
+            background: #e0e0e0;
+            color: #222;
+        }
+        @media (max-width: 500px) {
+            .main-card {
+                max-width: 98vw;
+                padding: 10px 2vw;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main-card">
+        <div class="profile-section d-flex align-items-center gap-3">
+            <img src="profile.png" alt="Profile" class="profile-img">
+            <div>
+                <h5>Michael</h5>
+                <p class="mb-0">You've officially joined your first investment knowledge club!</p>
+            </div>
+        </div>
+        <div class="score-cards">
+            <div class="score-card">
+                <div class="score-name">Benard Makodingo</div>
+                <div class="score-value">350</div>
+            </div>
+            <div class="score-card green">
+                <div class="score-name">kigSmall Foot</div>
+                <div class="score-value">225</div>
+            </div>
+            <div class="score-card yellow">
+                <div class="score-name">Caroline Likhoi</div>
+                <div class="score-value">117</div>
+            </div>
+            <div class="score-card">
+                <div class="score-name">Caroline Likhoi</div>
+                <div class="score-value">321</div>
+            </div>
+        </div>
+        <div class="mb-2">
+            <div class="section-title">Now let's make you great!</div>
+            <div class="section-desc">
+                You have shown us where you are doing well and where we can support you to be great!
+            </div>
+            <div style="color:#fff;font-size:0.98rem;margin-top:2px;">
+                From your profile we recommend these memberships. Pick on that fits you best and start your financial adventure
+            </div>
+        </div>
+        <div class="membership-section">
+            <div class="membership-card foundation p-0 mb-3">
+                <div class="foundation-header">
+                    FOUNDATION <span>MEMBERSHIP</span>
+                </div>
+                <div class="foundation-body">
+                    We invest for you, in shares and in the Mansa-X global fund. Service is free online with your personal representative, but service in the office may have extra charges.
+                </div>
+            </div>
+            <div class="membership-card economy p-0 mb-3">
+                <div class="economy-header">
+                    ECONOMY <span>MEMBERSHIP</span>
+                </div>
+                <div class="economy-body">
+                    We will invest your money for you at a guaranteed rate with the Mansa-X global fund. Service is free online with your personal representative, but service in the office may have extra charges.
+                </div>
+            </div>
+            <div class="w-100 text-center my-2">
+                <div class="yellow-info-bar">
+                    A closer look at the memberships details is available here
+                </div>
+            </div>
+            <div class="d-flex justify-content-between align-items-center mt-4" style="width:100%;">
+                <div></div>
+                <div style="flex:1;text-align:right;">
+                    <a href="#" style="display:inline-block;background:#25d366;border-radius:50%;padding:6px;">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width:28px;height:28px;vertical-align:middle;">
+                    </a>
+                </div>
+            </div>
+            <div class="text-center mt-2" style="background:#ffe082;color:#fff;font-size:0.65rem;padding:6px 0 2px 0;border-radius:0 0 8px 8px;">
+                Fourfront Management © 2025. All Rights Reserved.
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+  
+    </script>
+</body>
+</html>

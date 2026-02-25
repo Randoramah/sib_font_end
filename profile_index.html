@@ -69,6 +69,18 @@
         .score-card .score-name {
             font-size: 0.95rem;
             font-weight: 600;
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 8px;
+        }
+        .score-card .score-profile {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            object-fit: cover;
+            display: inline-block;
+            vertical-align: middle;
+        }
         }
         .score-card .score-value {
             font-size: 1.5rem;
@@ -195,19 +207,31 @@
         </div>
         <div class="score-cards">
             <div class="score-card">
-                <div class="score-name">Benard Makodingo</div>
+                <div style="display:flex;align-items:center;justify-content:center;margin-bottom:2px;">
+                    <img src="benard.png" alt="Benard Makodingo" class="score-profile">
+                    <div class="score-name">Benard Makodingo</div>
+                </div>
                 <div class="score-value">350</div>
             </div>
             <div class="score-card green">
-                <div class="score-name">kigSmall Foot</div>
+                <div style="display:flex;align-items:center;justify-content:center;margin-bottom:2px;">
+                    <img src="benard.png" alt="kigSmall Foot" class="score-profile">
+                    <div class="score-name">kigSmall Foot</div>
+                </div>
                 <div class="score-value">225</div>
             </div>
             <div class="score-card yellow">
-                <div class="score-name">Caroline Likhoi</div>
+                <div style="display:flex;align-items:center;justify-content:center;margin-bottom:2px;">
+                    <img src="likhoi.png" alt="Caroline Likhoi" class="score-profile">
+                    <div class="score-name">Caroline Likhoi</div>
+                </div>
                 <div class="score-value">117</div>
             </div>
             <div class="score-card">
-                <div class="score-name">Caroline Likhoi</div>
+                <div style="display:flex;align-items:center;justify-content:center;margin-bottom:2px;">
+                    <img src="likhoi.png" alt="Caroline Likhoi" class="score-profile">
+                    <div class="score-name">Caroline Likhoi</div>
+                </div>
                 <div class="score-value">321</div>
             </div>
         </div>
